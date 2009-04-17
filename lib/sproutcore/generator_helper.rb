@@ -133,7 +133,8 @@ module SproutCore
     
     # Checks whether the target directory for a generated file exists
     def target_directory_exists?
-      File.exists?("#{Dir.pwd}/clients/#{File.dirname(args[0])}")
+      File.exists?("#{Dir.pwd}/clients/#{File.dirname(args[0])}") || 
+      File.exists?("#{Dir.pwd}/frameworks/#{File.dirname(args[0])}") 
     end
     
     # Checks that file generation was in the format client_name/file_name
